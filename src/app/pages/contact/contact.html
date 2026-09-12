@@ -1,0 +1,98 @@
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow" style="justify-content:center">Get In Touch</div>
+    <h1>We'd Love To Stitch For You</h1>
+    <p>Visit our boutique, call us, or send a quick message — we usually respond the same day.</p>
+  </div>
+</section>
+
+<section class="section contact-section">
+  <div class="container contact-grid">
+
+    <div class="info-col">
+      <div class="info-card">
+        <div class="info-icon">📍</div>
+        <div>
+          <h3>Visit Our Boutique</h3>
+          <p>Nivha By Fashion Cut<br />Near Sree Krishna Sweets, Koppam Junction<br />Palakkad, Kerala – 679307</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">📞</div>
+        <div>
+          <h3>Call Us</h3>
+          <p><a href="tel:+919947365696">+91 99473 65696</a></p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">🕒</div>
+        <div>
+          <h3>Working Hours</h3>
+          <p>Monday – Saturday: 8:30 AM – 7:00 PM<br />Sunday: Closed</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">✉️</div>
+        <div>
+          <h3>Email</h3>
+          <p><a href="mailto:hello&#64;nivhafashioncut.example">hello&#64;nivhafashioncut.example</a></p>
+        </div>
+      </div>
+
+      <div class="map-wrap">
+        <iframe
+          title="Nivha By Fashion Cut location map"
+          [src]="mapUrl"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+    <div class="form-col">
+      <div class="form-card" *ngIf="!submitted()">
+        <h2>Send Us A Message</h2>
+        <p class="form-sub">Fill in your details and we'll get back to you shortly.</p>
+
+        <form (ngSubmit)="onSubmit()" #contactForm="ngForm" novalidate>
+          <div class="field">
+            <label for="name">Full Name*</label>
+            <input id="name" name="name" type="text" [(ngModel)]="model.name" required placeholder="Your name" />
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone Number*</label>
+            <input id="phone" name="phone" type="tel" [(ngModel)]="model.phone" required placeholder="+91 00000 00000" />
+          </div>
+
+          <div class="field">
+            <label for="service">Service Interested In</label>
+            <select id="service" name="service" [(ngModel)]="model.service">
+              <option *ngFor="let s of services" [value]="s">{{ s }}</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" [(ngModel)]="model.message" placeholder="Tell us about your outfit or requirement..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary submit-btn" [disabled]="contactForm.invalid">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <div class="form-card success-card" *ngIf="submitted()">
+        <div class="success-icon">✅</div>
+        <h2>Thank You, {{ model.name }}!</h2>
+        <p>Your message has been received. Our team will contact you shortly at {{ model.phone }}.</p>
+        <button class="btn btn-outline" (click)="resetForm()">Send Another Message</button>
+      </div>
+    </div>
+
+  </div>
+</section>

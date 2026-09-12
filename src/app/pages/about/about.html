@@ -1,0 +1,93 @@
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow" style="justify-content:center">About Us</div>
+    <h1>The Story Behind Nivha By Fashion Cut</h1>
+    <p>A neighbourhood ladies tailoring boutique near Sree Krishna Sweets, Koppam Junction, Palakkad — stitching confidence into every outfit since day one.</p>
+  </div>
+</section>
+
+<section class="section story">
+  <div class="container story-grid">
+    <div class="story-visual">
+      <div class="story-frame">
+        <div class="story-emoji">🧵</div>
+      </div>
+    </div>
+    <div class="story-copy">
+      <div class="eyebrow">Our Journey</div>
+      <h2>Stitching Trust, One Outfit At A Time</h2>
+      <p>
+        Nivha By Fashion Cut began as a humble tailoring shop dedicated to the women of Koppam and
+        the wider Palakkad community. What started with simple alterations and blouse stitching has
+        grown into a full-service ladies tailoring and embroidery boutique — trusted for everything
+        from everyday wear to bridal outfits.
+      </p>
+      <p>
+        Located conveniently near Sree Krishna Sweets at Koppam Junction, our team combines
+        traditional stitching expertise with an eye for modern design, ensuring every customer
+        walks out with an outfit that fits perfectly and feels uniquely theirs.
+      </p>
+      <div class="story-badges">
+        <span>🪡 Skilled Tailors</span>
+        <span>📍 Koppam Junction</span>
+        <span>⭐ 4.5 Rated</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section mission">
+  <div class="container mission-grid">
+    <div class="mission-card">
+      <h3>Our Mission</h3>
+      <p>To provide every customer with beautifully tailored, well-fitted clothing through skilled craftsmanship, honest service and attention to detail — one outfit at a time.</p>
+    </div>
+    <div class="mission-card">
+      <h3>Our Vision</h3>
+      <p>To be Palakkad's most trusted name in ladies tailoring and boutique fashion, known equally for quality, creativity and customer care.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section values">
+  <div class="container">
+    <div class="section-head text-center">
+      <div class="eyebrow" style="justify-content:center">What Drives Us</div>
+      <h2>Our Core Values</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card" *ngFor="let v of values">
+        <div class="value-icon">{{ v.icon }}</div>
+        <h3>{{ v.title }}</h3>
+        <p>{{ v.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section timeline">
+  <div class="container">
+    <div class="section-head text-center">
+      <div class="eyebrow" style="justify-content:center">Our Growth</div>
+      <h2>From A Small Shop To A Trusted Boutique</h2>
+    </div>
+    <div class="timeline-track">
+      <div class="timeline-item" *ngFor="let m of milestones; let i = index">
+        <div class="timeline-dot">{{ i + 1 }}</div>
+        <h3>{{ m.year }}</h3>
+        <p>{{ m.text }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="container cta-inner">
+    <h2>Come Visit Our Boutique</h2>
+    <p>Meet our team, feel the fabrics, and discuss your next outfit in person.</p>
+    <div class="cta-actions">
+      <a routerLink="/contact" class="btn btn-primary">Contact Us</a>
+      <a href="tel:+919947365696" class="btn btn-outline light">+91 99473 65696</a>
+    </div>
+  </div>
+</section>
