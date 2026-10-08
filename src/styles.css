@@ -1,3 +1,6 @@
+@import "tailwindcss";
+
+@layer base {
 :root {
   --color-maroon: #6b1e3c;
   --color-maroon-dark: #4a1329;
@@ -133,4 +136,5 @@ img { max-width: 100%; display: block; }
 ::selection {
   background: var(--color-gold-light);
   color: var(--color-maroon-dark);
+}
 }

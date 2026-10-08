@@ -1,145 +1,179 @@
-<div #rootEl>
+<div #rootEl class="home-page">
+  <section class="home-hero relative isolate flex min-h-[700px] items-center overflow-hidden text-white lg:min-h-[780px]">
+    <div class="hero-image absolute inset-0 -z-20" aria-hidden="true"></div>
+    <div class="hero-shade absolute inset-0 -z-10" aria-hidden="true"></div>
+    <div class="hero-grain absolute inset-0 -z-10 opacity-30" aria-hidden="true"></div>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg">
-    <span class="blob blob-1"></span>
-    <span class="blob blob-2"></span>
-    <span class="thread thread-1"></span>
-    <span class="thread thread-2"></span>
-  </div>
+    <div class="mx-auto grid w-full max-w-[1440px] items-center px-6 py-24 sm:px-10 lg:grid-cols-[1.05fr_.95fr] lg:px-20">
+      <div class="max-w-2xl">
+        <div class="mb-7 inline-flex items-center gap-3 text-[0.68rem] font-medium uppercase tracking-[0.3em] text-[#e6c77a] sm:text-xs">
+          <span class="h-px w-9 bg-[#d7b668]"></span>
+          Nivha By Fashion Cut <span class="text-white/60">·</span> Palakkad
+        </div>
 
-  <div class="container hero-inner">
-    <div class="hero-copy">
-      <div class="eyebrow fade-in-up d1">Ladies Tailoring &amp; Boutique</div>
-      <h1 class="fade-in-up d2">
-        Where Every Stitch<br />
-        Tells <span class="highlight">Your Story</span>
-      </h1>
-      <p class="hero-sub fade-in-up d3">
-        Nivha By Fashion Cut is a trusted ladies tailoring &amp; embroidery boutique near
-        Sree Krishna Sweets, Koppam Junction, Palakkad — blending traditional craft with
-        modern design for a fit that's truly yours.
-      </p>
-      <div class="hero-actions fade-in-up d4">
-        <a routerLink="/contact" class="btn btn-primary">Book an Appointment</a>
-        <a href="tel:+919947365696" class="btn btn-outline">Call Us Now</a>
-      </div>
-      <div class="hero-stats fade-in-up d5">
-        <div><strong>15+</strong><span>Years of Craft</span></div>
-        <div><strong>1000+</strong><span>Outfits Stitched</span></div>
-        <div><strong>4.5★</strong><span>Customer Rating</span></div>
-      </div>
-    </div>
+        <h1 class="mb-7 max-w-[700px] font-[var(--font-heading)] text-[clamp(2.75rem,12vw,3.4rem)] font-medium leading-[1.02] tracking-[-0.045em] text-white sm:text-[clamp(3.4rem,9vw,5rem)] lg:text-[5rem]">
+          Made to fit.<br />
+          <span class="italic text-[#e8cc8a]">Made to feel</span><br />
+          like you.
+        </h1>
 
-    <div class="hero-visual fade-in-up d3">
-      <div class="hero-card">
-        <div class="hero-card-badge">✂️ Custom Fit</div>
-        <div class="hero-card-badge b2">🧵 Fine Embroidery</div>
-        <div class="hero-card-badge b3">👗 Boutique Wear</div>
-        <div class="swatch"></div>
-      </div>
-    </div>
-  </div>
+        <p class="mb-9 max-w-lg text-base leading-8 text-white/75 sm:text-lg">
+          Thoughtful tailoring, beautiful detail, and a fit that feels entirely your own.
+          Discover the art of dressing well, made right here in Koppam.
+        </p>
 
-  <div class="scroll-cue">
-    <span></span>
-  </div>
-</section>
+        <div class="flex flex-wrap items-center gap-4">
+          <a
+            routerLink="/contact"
+            class="inline-flex min-h-14 items-center justify-center gap-3 bg-[#e8cc8a] px-7 text-sm font-semibold text-[#31141e] transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e8cc8a]"
+          >
+            Book a fitting <span aria-hidden="true">↗</span>
+          </a>
+          <a
+            href="#services"
+            class="inline-flex min-h-14 items-center justify-center border border-white/45 px-7 text-sm font-medium text-white transition hover:border-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+          >
+            Explore our craft
+          </a>
+        </div>
 
-<!-- SERVICES -->
-<section class="section services">
-  <div class="container">
-    <div class="section-head text-center reveal">
-      <div class="eyebrow" style="justify-content:center">What We Offer</div>
-      <h2>Tailoring Services Made For You</h2>
-      <p class="section-sub">From everyday wear to bridal boutique pieces, every outfit is stitched with precision and care.</p>
-    </div>
-
-    <div class="services-grid">
-      <div class="service-card reveal" *ngFor="let s of services; let i = index" [style.transition-delay.ms]="i * 80">
-        <div class="service-icon">{{ s.icon }}</div>
-        <h3>{{ s.title }}</h3>
-        <p>{{ s.desc }}</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="section process">
-  <div class="container">
-    <div class="section-head text-center reveal">
-      <div class="eyebrow" style="justify-content:center">Simple Process</div>
-      <h2>From Idea To Perfect Fit</h2>
-    </div>
-
-    <div class="steps-grid">
-      <div class="step-card reveal" *ngFor="let s of steps; let i = index" [style.transition-delay.ms]="i * 100">
-        <div class="step-num">{{ s.num }}</div>
-        <h3>{{ s.title }}</h3>
-        <p>{{ s.desc }}</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY CHOOSE US -->
-<section class="section why">
-  <div class="container why-grid">
-    <div class="why-visual reveal">
-      <div class="why-frame">
-        <span class="ring ring-1"></span>
-        <span class="ring ring-2"></span>
-        <div class="why-emoji">🪡</div>
-      </div>
-    </div>
-    <div class="why-copy reveal">
-      <div class="eyebrow">Why Nivha By Fashion Cut</div>
-      <h2>Crafted With Care, Fitted With Precision</h2>
-      <ul class="why-list">
-        <li><span>✔</span> Experienced tailors with an eye for detail</li>
-        <li><span>✔</span> Personalised measurements &amp; fitting sessions</li>
-        <li><span>✔</span> On-time delivery, every time</li>
-        <li><span>✔</span> Affordable pricing without compromising quality</li>
-        <li><span>✔</span> Conveniently located at Koppam Junction, Palakkad</li>
-      </ul>
-      <a routerLink="/about" class="btn btn-primary">More About Us</a>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="section testimonials">
-  <div class="container">
-    <div class="section-head text-center reveal">
-      <div class="eyebrow" style="justify-content:center">Customer Love</div>
-      <h2>What Our Customers Say</h2>
-    </div>
-
-    <div class="testimonial-grid">
-      <div class="testimonial-card reveal" *ngFor="let t of testimonials; let i = index" [style.transition-delay.ms]="i * 100">
-        <div class="quote-mark">“</div>
-        <p>{{ t.quote }}</p>
-        <div class="testimonial-author">
-          <strong>{{ t.name }}</strong>
-          <span>{{ t.role }}</span>
+        <div class="mt-14 flex flex-wrap items-center gap-x-5 gap-y-4 border-t border-white/20 pt-6 text-[0.65rem] uppercase tracking-[0.16em] text-white/75 sm:mt-20 sm:gap-x-7 sm:text-xs">
+          <span class="whitespace-nowrap"><strong class="mr-2 font-semibold text-white">15+</strong> years of craft</span>
+          <span class="hidden h-1 w-1 rounded-full bg-[#d7b668] sm:block"></span>
+          <span class="whitespace-nowrap"><strong class="mr-2 font-semibold text-white">1,000+</strong> outfits stitched</span>
+          <span class="hidden h-1 w-1 rounded-full bg-[#d7b668] sm:block"></span>
+          <span class="whitespace-nowrap"><strong class="mr-2 font-semibold text-white">4.5</strong> customer rating</span>
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- CTA -->
-<section class="section cta">
-  <div class="container cta-inner reveal">
-    <h2>Ready To Get Your Perfect Fit?</h2>
-    <p>Visit us near Sree Krishna Sweets, Koppam Junction, Palakkad — or give us a call to book your appointment today.</p>
-    <div class="cta-actions">
-      <a routerLink="/contact" class="btn btn-primary">Get In Touch</a>
-      <a href="tel:+919947365696" class="btn btn-outline light">+91 99473 65696</a>
+    <a href="#services" class="absolute bottom-7 right-8 hidden items-center gap-3 text-[0.65rem] uppercase tracking-[0.25em] text-white/70 transition hover:text-white sm:flex">
+      Scroll to discover <span aria-hidden="true" class="text-lg">↓</span>
+    </a>
+  </section>
+
+  <section id="services" class="scroll-mt-20 bg-[#fbf8f3] px-6 py-20 sm:px-10 sm:py-28 lg:px-20">
+    <div class="mx-auto max-w-[1280px]">
+      <div class="mb-12 flex flex-col justify-between gap-6 md:mb-16 md:flex-row md:items-end">
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#9b7641]">The Nivha experience</p>
+          <h2 class="max-w-2xl font-[var(--font-heading)] text-4xl font-medium leading-tight tracking-[-0.03em] text-[#381b25] sm:text-5xl">
+            Your vision, beautifully <span class="italic text-[#9b7641]">tailored.</span>
+          </h2>
+        </div>
+        <p class="max-w-md text-sm leading-7 text-[#756a68]">
+          From the first measurement to the final finishing touch, every piece is made with
+          patience, precision, and a personal touch.
+        </p>
+      </div>
+
+      <div class="grid gap-px bg-[#e7ded2] sm:grid-cols-2 lg:grid-cols-3">
+        <article
+          *ngFor="let s of services; let i = index"
+          class="reveal group min-h-64 bg-[#fbf8f3] p-8 transition duration-300 hover:bg-white sm:p-10"
+          [style.transition-delay.ms]="i * 80"
+        >
+          <div class="mb-10 flex items-start justify-between">
+            <span class="text-3xl" aria-hidden="true">{{ s.icon }}</span>
+            <span class="font-[var(--font-heading)] text-sm italic text-[#a58a66]">0{{ i + 1 }}</span>
+          </div>
+          <h3 class="mb-3 font-[var(--font-heading)] text-2xl font-medium text-[#381b25]">{{ s.title }}</h3>
+          <p class="mb-0 max-w-sm text-sm leading-7 text-[#756a68]">{{ s.desc }}</p>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <section class="overflow-hidden bg-white px-6 py-20 sm:px-10 sm:py-28 lg:px-20">
+    <div class="mx-auto grid max-w-[1280px] items-center gap-14 lg:grid-cols-2 lg:gap-24">
+      <div class="relative mx-auto w-full max-w-lg">
+        <div class="craft-photo aspect-[4/5] w-[82%] bg-cover bg-center"></div>
+        <div class="absolute -bottom-5 right-0 flex h-36 w-36 flex-col items-center justify-center border border-[#d7bf8c] bg-[#fbf8f3] text-center sm:h-44 sm:w-44">
+          <span class="font-[var(--font-heading)] text-4xl italic text-[#9b7641]">N</span>
+          <span class="mt-2 text-[0.6rem] uppercase tracking-[0.2em] text-[#5b4b49]">Stitched for you</span>
+        </div>
+      </div>
+
+      <div class="max-w-xl">
+        <p class="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#9b7641]">A little about us</p>
+        <h2 class="mb-6 font-[var(--font-heading)] text-4xl font-medium leading-tight tracking-[-0.03em] text-[#381b25] sm:text-5xl">
+          The right fit is more than a measurement.
+        </h2>
+        <p class="mb-4 text-base leading-8 text-[#756a68]">
+          It is the confidence to walk into a room as yourself. At Nivha, we bring together
+          traditional tailoring skill and a modern eye for detail to create pieces that feel
+          considered, comfortable, and unmistakably yours.
+        </p>
+        <p class="mb-8 text-base leading-8 text-[#756a68]">
+          From everyday favourites to once-in-a-lifetime outfits, our Koppam team is here to
+          help you bring your idea to life.
+        </p>
+        <a
+          routerLink="/about"
+          class="inline-flex items-center gap-3 border-b border-[#9b7641] pb-2 text-sm font-semibold text-[#381b25] transition hover:gap-5"
+        >
+          Get to know Nivha <span aria-hidden="true" class="text-[#9b7641]">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#f4eee6] px-6 py-20 sm:px-10 sm:py-24 lg:px-20">
+    <div class="mx-auto max-w-[1280px]">
+      <div class="mb-12 text-center">
+        <p class="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#9b7641]">Simple, personal, considered</p>
+        <h2 class="font-[var(--font-heading)] text-4xl font-medium tracking-[-0.03em] text-[#381b25] sm:text-5xl">From first idea to final fit.</h2>
+      </div>
+      <div class="grid gap-8 md:grid-cols-4 md:gap-5">
+        <article *ngFor="let s of steps" class="border-t border-[#c9bca8] pt-5">
+          <span class="font-[var(--font-heading)] text-3xl italic text-[#9b7641]">{{ s.num }}</span>
+          <h3 class="mt-5 font-[var(--font-heading)] text-xl font-medium text-[#381b25]">{{ s.title }}</h3>
+          <p class="mt-2 mb-0 text-sm leading-7 text-[#756a68]">{{ s.desc }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#2c111c] px-6 py-20 text-white sm:px-10 sm:py-28 lg:px-20">
+    <div class="mx-auto max-w-[1280px]">
+      <div class="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#d7b668]">Kind words, close to home</p>
+          <h2 class="font-[var(--font-heading)] text-4xl font-medium tracking-[-0.03em] text-white sm:text-5xl">Worn with confidence.</h2>
+        </div>
+        <p class="mb-1 text-sm text-white/65">A little love from our customers in Palakkad.</p>
+      </div>
+      <div class="grid gap-5 md:grid-cols-3">
+        <article *ngFor="let t of testimonials" class="border border-white/15 p-7 sm:p-8">
+          <div class="mb-5 text-xl tracking-[0.2em] text-[#e8cc8a]" aria-label="5 stars">★★★★★</div>
+          <p class="mb-8 font-[var(--font-heading)] text-xl leading-8 text-white">“{{ t.quote }}”</p>
+          <div class="border-t border-white/15 pt-5">
+            <p class="mb-1 text-sm font-semibold text-white">{{ t.name }}</p>
+            <p class="mb-0 text-xs uppercase tracking-[0.15em] text-white/55">{{ t.role }}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#fbf8f3] px-6 py-20 text-center sm:px-10 sm:py-28">
+    <div class="mx-auto max-w-3xl">
+      <p class="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#9b7641]">Your next favourite outfit starts here</p>
+      <h2 class="mb-5 font-[var(--font-heading)] text-4xl font-medium leading-tight tracking-[-0.03em] text-[#381b25] sm:text-6xl">
+        Let’s make something <span class="italic text-[#9b7641]">wonderful.</span>
+      </h2>
+      <p class="mx-auto mb-8 max-w-xl text-base leading-8 text-[#756a68]">
+        Visit us near Sree Krishna Sweets, Koppam Junction, and let’s talk about what you have in mind.
+      </p>
+      <a
+        routerLink="/contact"
+        class="inline-flex min-h-14 items-center justify-center gap-3 bg-[#381b25] px-8 text-sm font-semibold text-white transition hover:bg-[#6b1e3c] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#381b25]"
+      >
+        Start your fitting <span aria-hidden="true">↗</span>
+      </a>
+      <p class="mt-6 mb-0 text-sm text-[#756a68]">
+        Or call us at <a class="font-semibold text-[#381b25] underline decoration-[#c9b47f] underline-offset-4" href="tel:+919947365696">+91 99473 65696</a>
+      </p>
+    </div>
+  </section>
 </div>
